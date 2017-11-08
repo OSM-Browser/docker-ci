@@ -13,5 +13,5 @@ COPY --from=0 docker /usr/local/bin
 COPY --from=0 docker-compose /usr/local/bin
 
 RUN apt-get update && \
-  apt-get install -y --no-install-recommends git ssh && \
+  apt-get install -y --no-install-recommends ca-certificates git ssh && \
   rm -rf /var/lib/apt/lists/*
