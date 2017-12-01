@@ -12,6 +12,9 @@ FROM ubuntu:17.10
 COPY --from=0 docker /usr/local/bin
 COPY --from=0 docker-compose /usr/local/bin
 
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.8.4/bin/linux/amd64/kubectl /usr/local/bin/kubectl
+RUN chmod +x /usr/local/bin/kubectl
+
 RUN apt-get update && \
   apt-get install -y --no-install-recommends ca-certificates git ssh && \
   rm -rf /var/lib/apt/lists/*
