@@ -3,7 +3,7 @@ FROM alpine
 ENV DOCKER_VERSION 17.12.0
 ENV DOCKER_COMPOSE_VERSION 1.18.0
 ENV KUBECTL_VERSION 1.9.2
-ENV HELM_VERSION 2.8.0
+ENV HELM_VERSION 2.8.2
 
 RUN apk add --no-cache openssl
 RUN wget -q -O - https://download.docker.com/linux/static/stable/x86_64/docker-$DOCKER_VERSION-ce.tgz | tar -x -f - -z --strip-components=1 -v docker/docker
