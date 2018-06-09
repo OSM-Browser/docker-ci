@@ -11,7 +11,7 @@ RUN wget -q -O docker-compose https://github.com/docker/compose/releases/downloa
 RUN wget -q -O kubectl https://storage.googleapis.com/kubernetes-release/release/v$KUBECTL_VERSION/bin/linux/amd64/kubectl && chmod +x kubectl
 RUN wget -q -O - https://storage.googleapis.com/kubernetes-helm/helm-v$HELM_VERSION-linux-amd64.tar.gz | tar -x -f - -z --strip-components=1 -v linux-amd64/helm
   
-FROM ubuntu:17.10
+FROM ubuntu:18.04
 
 COPY --from=0 docker /usr/local/bin
 COPY --from=0 docker-compose /usr/local/bin
