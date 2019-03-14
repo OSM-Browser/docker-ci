@@ -21,3 +21,6 @@ COPY --from=0 helm /usr/local/bin
 RUN apt-get update && \
   apt-get install -y --no-install-recommends ca-certificates git ssh && \
   rm -rf /var/lib/apt/lists/*
+
+RUN helm init -c && \
+  helm repo add dtannock-charts https://davidtannock.github.io/helm-charts/
