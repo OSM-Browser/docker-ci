@@ -22,5 +22,5 @@ RUN apt-get update && \
   apt-get install -y --no-install-recommends ca-certificates git ssh && \
   rm -rf /var/lib/apt/lists/*
 
-RUN helm init -c && \
+RUN helm repo add stable https://kubernetes-charts.storage.googleapis.com && \
   helm repo add dtannock-charts https://davidtannock.github.io/helm-charts/
