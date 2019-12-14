@@ -23,4 +23,4 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 RUN helm repo add stable https://kubernetes-charts.storage.googleapis.com && \
-  helm repo add dtannock-charts https://davidtannock.github.io/helm-charts/
+  helm repo add strimoid https://strimoid.github.io/helm-charts/
