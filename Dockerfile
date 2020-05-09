@@ -1,9 +1,9 @@
 FROM alpine
 
-ENV DOCKER_VERSION 19.03.5
-ENV DOCKER_COMPOSE_VERSION 1.25.0
-ENV KUBECTL_VERSION 1.17.0
-ENV HELM_VERSION 3.0.1
+ENV DOCKER_VERSION 19.03.8
+ENV DOCKER_COMPOSE_VERSION 1.25.5
+ENV KUBECTL_VERSION 1.18.0
+ENV HELM_VERSION 3.2.1
 
 RUN apk add --no-cache openssl
 RUN wget -q -O - https://download.docker.com/linux/static/stable/x86_64/docker-$DOCKER_VERSION.tgz | tar -x -f - -z --strip-components=1 -v docker/docker
